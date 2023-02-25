@@ -36,7 +36,7 @@ def test_get_chronic_liver_mortality_by_state():
 
 def test_get_missing_values_count_by_state():
     state_code = ['tx','va','ga','fl','ca','il','ny','nj','tn','co']
-    value = [4583,5801,5423,4150,4554,8304,4433,5338,7457,5378]
+    value = [4628,5846,5468,4195,4599,8349,4478,5383,7502,5423]
     check_if_file_exists()
     random_choice = random.randint(0,9)
     assert get_missing_values_count_by_state(state_code[random_choice]) == value[random_choice]

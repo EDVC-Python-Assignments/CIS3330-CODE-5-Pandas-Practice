@@ -1,3 +1,7 @@
+# Data File
+US_chronic_diseases.csv
+#Solution
+code_5_solution.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
