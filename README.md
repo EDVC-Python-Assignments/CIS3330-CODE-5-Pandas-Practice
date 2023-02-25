@@ -38,4 +38,4 @@ In this coding assignment, your will practice data filtering and retrival from a
 
 * The file `US_chronic_diseases.csv` records the "U.S. Chronic Disease Indicators (CDI)" and was obtained from Data.Gov [https://catalog.data.gov/dataset/u-s-chronic-disease-indicators-cdi]. You can download it from the original source and if incorporated to the code repository rename the file as `US_chronic_diseases.csv`
 * The `US_chronic_diseases.csv`is also available in Blackboard. 
-* **DO NOT** include `US_chronic_diseases.csv` in your code repository because the GitHub does not accept files bigger than 100M.B
+* **DO NOT** include `US_chronic_diseases.csv` in your code repository because the GitHub does not accept files bigger than 100MB
