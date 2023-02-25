@@ -1,44 +1,43 @@
 import os,sys
 import random
 import pytest
-from code_5 import get_big_mac_price_by_year
-from code_5 import get_big_mac_price_by_country
-from code_5 import get_the_cheapest_big_mac_price_by_year
-from code_5 import get_the_most_expensive_big_mac_price_by_year
+from code_5 import get_melanoma_mortality_information_by_state
+from code_5 import get_asthma_mortality_information_by_state
+from code_5 import get_chronic_liver_mortality_by_state
+from code_5 import get_missing_values_count_by_state
 
 def check_if_file_exists():
     try:
-        exists = os.path.exists("code_4.py")
+        exists = os.path.exists("code_5.py")
         assert exists == True
     except:
         sys.exit()
 
-def test_big_mac_price_by_year():
-    country_code = ['arg','usa','mex','arg','kor','jpn','gbr','bra','chn','can']
-    year = [2012,2018,2009,2017,2019,2012,2014,2008,2016,2006]
-    value = [4.4, 4.62, 2.39, 3.8, 3.92, 4.13, 4.78, 4.73, 2.73, 3.07]
+def test_get_melanoma_mortality_information_by_state():
     check_if_file_exists()
-    random_choice = random.randint(1,10)
-    assert get_big_mac_price_by_year(year[random_choice-1],country_code[random_choice-1]) == value[random_choice-1]
+    state_code = ['tx','va','ga','fl','ca','il','ny','nj','tn','co']
+    value = [80.72,47.4,47.22,123.19,131.95,74.7,66.25,42.45,45.93,33.44]
+    random_choice = random.randint(0,9)
+    assert get_melanoma_mortality_information_by_state(state_code[random_choice]) == value[random_choice]
 
-def test_big_mac_price_by_country():
-    country_code = ['arg','rus','mex','twn','kor','jpn','gbr','zaf','chn','hun']
-    value = [3.04, 1.98, 2.68, 2.37, 3.35, 3.14, 3.98, 2.13, 2.37, 3.06]
+def test_get_asthma_mortality_information_by_state():
+    state_code = ['tx','va','ga','fl','ca','il','ny','nj','tn','co']
+    value = [41.31,26.01,27.08,37.53,64.92,43.81,57.5,29.81,22.42,18.55]
     check_if_file_exists()
-    random_choice = random.randint(1,10)
-    assert get_big_mac_price_by_country(country_code[random_choice-1])  == value[random_choice-1]
+    random_choice = random.randint(0,9)
+    assert get_asthma_mortality_information_by_state(state_code[random_choice]) == value[random_choice]
 
-def test_the_cheapest_big_mac_price_by_year():
-    year = [2008,2012,2019,2016,2011,2000,2004,2007,2015,2005]
-    value =['Malaysia(MYS): $1.7', 'India(IND): $1.58', 'Russia(RUS): $1.65', 'Venezuela(VEN): $0.66', 'India(IND): $1.89', 'Malaysia(MYS): $1.19', 'Saudi Arabia(SAU): $0.64', 'China(CHN): $1.41', 'Venezuela(VEN): $0.67', 'China(CHN): $1.27']
+def test_get_chronic_liver_mortality_by_state():
+    state_code = ['tx','va','ga','fl','ca','il','ny','nj','tn','co']
+    value = [11.74,9.72,9.08,12.42,15.3,9.52,7.45,8.39,13.57,18.93]
     check_if_file_exists()
-    random_choice = random.randint(1,10)
-    assert get_the_cheapest_big_mac_price_by_year(year[random_choice-1]) == value[random_choice-1]
+    random_choice = random.randint(0,9)
+    assert get_chronic_liver_mortality_by_state(state_code[random_choice]) == value[random_choice]
 
-def test_the_most_expensive_big_mac_price_by_year():
-    year = [2003,2014,2016,2014,2013,2005,2006,2010,2011,2009]
-    value = ['Switzerland(CHE): $4.6', 'Norway(NOR): $7.8', 'Switzerland(CHE): $6.59', 'Norway(NOR): $7.8', 'Venezuela(VEN): $9.08', 'Norway(NOR): $6.06', 'Norway(NOR): $7.05', 'Norway(NOR): $7.2', 'Norway(NOR): $8.31', 'Norway(NOR): $6.15']
+def test_get_missing_values_count_by_state():
+    state_code = ['tx','va','ga','fl','ca','il','ny','nj','tn','co']
+    value = [4583,5801,5423,4150,4554,8304,4433,5338,7457,5378]
     check_if_file_exists()
-    random_choice = random.randint(1,10)
-    assert get_the_most_expensive_big_mac_price_by_year(year[random_choice-1]) == value[random_choice-1]
+    random_choice = random.randint(0,9)
+    assert get_missing_values_count_by_state(state_code[random_choice]) == value[random_choice]
 

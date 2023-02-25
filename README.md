@@ -25,12 +25,9 @@ In this coding assignment, your will practice data filtering and retrival from a
 
 * The country_code is stored under the column **'iso_a3'**
 * The price of the big mac in dollars is stored under the column **'dollar_price'**
-* For the functions `get_big_mac_price_by_year`and `get_big_mac_price_by_country` you must return a float rounded to **2** decimal spaces.
-* For the functions `get_the_cheapest_big_mac_price_by_year` and `get_the_most_expensive_big_mac_price_by_year`, you must return a message with exactly the same format.
-* You need to program your interface under the if statement: `if __name__ == "__main__":`.
-* It is recommended to use Pandas, but you are free to use the CSV module.
+* Program your interface under the if statement: `if __name__ == "__main__":`.
 * Use the built-in function round() to round decimal numbers. For example: `round(0.5556,2)` should return **0.56**
 
 ## Copyright disclosure
 
-* The file `big-mac-full-index` was obtained from [https://github.com/TheEconomist/big-mac-data] (https://github.com/TheEconomist/big-mac-data). The file is protected under the MIT License [https://github.com/TheEconomist/big-mac-data/blob/master/LICENCE](https://github.com/TheEconomist/big-mac-data/blob/master/LICENCE).
+* The file `US_chronic_diseases.csv` records the "U.S. Chronic Disease Indicators (CDI)" and was obtained from Data.Gov [https://catalog.data.gov/dataset/u-s-chronic-disease-indicators-cdi]
